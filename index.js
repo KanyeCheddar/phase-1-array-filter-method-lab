@@ -4,8 +4,7 @@ function findMatching(drivers, string) {
 }
 
 function fuzzyMatch(drivers, string) {
-
-
-    const newArray = drivers.filter(driver => driver.substring(1,3) === string.substring(1,3));
+    const newArray = drivers.filter(driver => driver.startsWith(string));
     return newArray;
 }
+
